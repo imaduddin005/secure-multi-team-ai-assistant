@@ -1,0 +1,101 @@
+{
+  "recordedDates": {
+    "controlledIntegration": "2026-11-21",
+    "finalLiveAcceptance": "2026-11-23"
+  },
+  "timezone": "Asia/Karachi",
+  "controlledLayer": "Real PostgreSQL and API with test-only Auth/AI/Storage fixtures",
+  "liveLayer": "Normal API/worker, Supabase Auth/private Storage, Redis/BullMQ, Gemini and Groq; synthetic documents only",
+  "originalEvidenceCommit": "62293ef91f101e72e762cacd862ee9892551a870",
+  "observedResults": {
+    "parallelUploads": {
+      "ready": true,
+      "distinctIdentitiesAndMatchingOriginals": true,
+      "nonduplicatedChunks": true
+    },
+    "lastQuotaSlot": {
+      "statuses": [
+        201,
+        429
+      ],
+      "charged": 1
+    },
+    "normalConcurrentQuestions": [
+      201,
+      201
+    ],
+    "duplicateRequests": {
+      "statuses": [
+        201,
+        409
+      ],
+      "replayStatus": 201,
+      "changedQuestionStatus": 409,
+      "ledger": {
+        "reservations": 1,
+        "charged": 1,
+        "held": 0,
+        "answers": 1
+      }
+    },
+    "maliciousSource": {
+      "supplied": true,
+      "kind": "grounded",
+      "instructionMarkerReturned": false,
+      "groundedExpectedFact": true,
+      "hiddenSalarySourceSupplied": false
+    },
+    "restrictedGrantAndRevocation": "Denied before intended grant; grounded REPORT-742 and citation after grant; whole prior answer/source/original/feedback/replay unavailable after revoke",
+    "versionLifecycle": "New DRILL-926 answer; historical DRILL-815 citation; dependent answers unavailable after deletion",
+    "roleFeedbackAudit": "Sara demotion immediately denied upload; role restored; feedback persisted; audit actor matched Hina"
+  },
+  "cleanup": {
+    "budgetRestored": true,
+    "rolesRestored": true,
+    "originalAndReadersPreserved": true,
+    "workerPurgeJobsSucceeded": true,
+    "testChatsPurged": true,
+    "finalHeld": 0
+  },
+  "limits": [
+    "One real malicious-source example is not general model immunity.",
+    "In-flight delete/revoke ordering uses real SQL locks with controlled providers; arbitrary vendor timing is separate.",
+    "No new application test run is implied by repository cleanup; original tested source hashes follow.",
+    "Shared-service outage, load, full live-browser matrix, actual timed UTC rollover and backup/restore remain unverified."
+  ],
+  "sourceSHA256": {
+    "database/migrations/001_schema.sql": "109c9295b7dfb30a0d420692fbc6da03045c58c4fcd972d2a2d0d12c3a855294",
+    "database/migrations/002_security.sql": "c87abeb8bcce23c77e3c743207d5375717f4f07a80d2042ff376122e3bdc3241",
+    "database/migrations/003_integrity.sql": "df0df8a3d1a5b49a440e5f104386babd7caad40bb805ee11d5ab6a3592d0e5da",
+    "database/migrations/004_membership_api.sql": "0918ddffafb0483ffb33e81559d67a0405f43695f08ff9153d1c720e503e2717",
+    "database/migrations/005_document_api.sql": "6d451969adeddc51e00745cd37450186846768fa97f45cd4784cc25560e95804",
+    "database/migrations/006_processing_commands.sql": "ed7619c6cb9957b185d19cad311739e96a96a0e388ca3b6b4a411df05572da08",
+    "database/migrations/007_quota_commands.sql": "5e9035f87e3a886352bfe8aafc4b2cc61c82d479f805b45ea246aa78db29a162",
+    "database/migrations/008_chat_commands.sql": "4b851be8b9fda48199a5ac7fceb4df4cb2f294f973f0c33887e374a3ea0d93be",
+    "database/migrations/009_administration.sql": "47de987f041cb21de3770e615adba7d97123568ddf20a3b2e13efb95d3ed98c8",
+    "database/migrations/010_recovery_and_search.sql": "7614fde1e106164aeb18024e680d98e77ec13ac013a4a2647ed3a4e891cce731",
+    "apps/api/src/app.ts": "06af2c5677818e5f00432d19ee444715cd055ab8f962081aaf19e0e3d58b3396",
+    "apps/api/src/auth.ts": "1ecaf76c5e763d5c395aa7a3ba7c9d8f0392d3b1eed62809cb920212f3862122",
+    "apps/api/src/chat.controller.ts": "36e94745b08ae6736997c5e81819d33fddd91653feaa1eb843d75f48e07a0db0",
+    "apps/api/src/chat.ts": "6ff6bf36637fa85b27d23bc2ad90177ce771e4c6cae744cc5024fd7ce65ca035",
+    "apps/api/src/config.ts": "f4473a997be5545e4e8429a9cbb9ff1dc1827f6b7ed6063daebde688d8b89f63",
+    "apps/api/src/database.ts": "21eadc95cd7a6529eb2568ee69e0e8e91d1b3a8ee8f5c0f41cbdf4d538919b50",
+    "apps/api/src/documents.controller.ts": "61588a29113a9121aa442a7259a31587e042f7d3757fed467c83e71684d2e50d",
+    "apps/api/src/extract.worker.ts": "88ffd20454f2f2368b0e5bd31ad2ef4e20efc675e9cd1e1e23ae7922e3b6a60a",
+    "apps/api/src/main.ts": "ca3a8870aa16f7b26e927f23c143dece8dc9718c62c5054b4af2bdc207bf2409",
+    "apps/api/src/processing.ts": "37cfb2d52ff18a57dd14a32d1e2930fc148dd9cd64c287f132723ea8b08e566e",
+    "apps/api/src/providers.ts": "fdcc0775645df3209a3d7e33853d7b5c46c5316f9b1547f7f2136fc5db4e1269",
+    "apps/api/src/teams.controller.ts": "4a307fc1006ff9acb586b235c2b81a557e1b739965e72d622b0bc34d19e309e8",
+    "apps/api/src/types.ts": "297a261a00704d8222f04ba151a46e68d3df901abd4e8c86281a3f5239f723e8",
+    "apps/api/src/worker.ts": "06b4db2233340d7065cc22bebfa798e61eb93d8fb99936455f8989a9926eeebf",
+    "tests/api/application.test.ts": "31c58f1c108f643856acb717551156a9f9775bcb5244f8f11e27879430945ffe",
+    "tests/api/providers.test.ts": "9e367b1d31e28812b64d1cc9ab7aecfdd7db52b4d35e21eadb0e565e4f23e295",
+    "tests/browser/server.ts": "079eca67956dd6d392a2c5da6cabf085f004bcfbad9151679821d4a59a82a632",
+    "tests/database/boundaries.test.ts": "002df1086e7e605c19e62babc2a8511f74f02116e8adf5211e14592ac4efe576",
+    "tests/database/fixtures.ts": "82b4eda04191d98cf19ee79d0c4b60cfafc99edb336018796d1b36d3ca8631d7"
+  },
+  "liveRunnerSHA256": {
+    "tools/check-live-final.mjs": "ccf3bc0002e5e1d466fd41bbfe071c0469df389d3aad038aa987f870367939e9",
+    "demo-files/Report Practice Policy.txt": "f9981a52558db2f9377c893dd4d13704259c31b81ecc14bf4203740c5cfd94b5"
+  }
+}

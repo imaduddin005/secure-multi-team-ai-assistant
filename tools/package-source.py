@@ -5,17 +5,22 @@ import hashlib, os, re, zipfile
 root=Path(__file__).resolve().parent.parent
 destination=root/'deliverables'/'secure-multi-team-ai-assistant-source.zip'
 destination.parent.mkdir(exist_ok=True)
-top={'AGENTS.md','README.md','.env.example','.gitignore','compose.yaml','package.json','package-lock.json',
+top={'README.md','.env.example','.gitignore','compose.yaml','package.json','package-lock.json',
      'tsconfig.api.json','tsconfig.database.json','jest.config.cjs','jest.database.config.cjs','requirements-tools.txt'}
 directories={'apps','database','docs','diagrams','tools','tests','demo-files'}
 excluded={'node_modules','.next','.tmp','.git','dist','build','coverage','__pycache__','runtime','uploads','storage-data','postgres-data','redis-data'}
 extensions={'.ts','.tsx','.js','.mjs','.cjs','.json','.css','.md','.sql','.mmd','.svg','.png','.py','.ps1','.txt','.yaml','.yml','.pdf'}
+submission_docs={'api.md','database-design.md','design-decisions.md','free-ai-setup.md','free-redis-setup.md',
+                 'operations.md','requirements.md','testing.md','testing-results.json'}
+submission_diagrams={'schema.mmd','schema.svg','simple-er-diagram.png'}
 files=[root/name for name in top if (root/name).is_file()]
 for dirname in directories:
     for folder,subdirs,names in os.walk(root/dirname):
-        subdirs[:]=[name for name in subdirs if name not in excluded]
+        subdirs[:]=[name for name in subdirs if name not in excluded and dirname not in {'docs','diagrams'}]
         for name in names:
             p=Path(folder)/name
+            if dirname=='docs' and name not in submission_docs:continue
+            if dirname=='diagrams' and name not in submission_diagrams:continue
             if name.startswith('.env') or p.suffix.lower() not in extensions or name.endswith('.tsbuildinfo'):continue
             if p.is_symlink():raise RuntimeError('Symlinks are not included in a submission')
             files.append(p)

@@ -1,6 +1,6 @@
-# Free-tier AI setup for the synthetic TechCo demo
+# Provider setup
 
-Updated: 2026-11-21 (Asia/Karachi). Real setup probes passed: two Gemini embedding vectors at 768 dimensions, and one Groq JSON answer with the supplied synthetic citation label. Sanitized results are in `live-ai-setup.json`. These are limited provider smoke checks, not complete application or model-quality acceptance. No paid service or billing upgrade was enabled. Free-tier eligibility and quotas are controlled by the providers and can change.
+Configuration reference dated 2026-11-21. The demonstrated profile used Gemini embeddings at 768 dimensions and Groq JSON/cited answers on synthetic documents. Live observations and limits are summarized in testing.md. Provider credentials stay server-only; no billing upgrade is required by this recipe.
 
 ## Two real services
 
@@ -38,6 +38,6 @@ An embedding endpoint/model/dimension change requires a planned reindex when rea
 
 Thirteen local HTTP/configuration cases verify separate endpoint routing, credential separation, response validation, and profile identity. Index-free arrays use input order; a single omitted zero index is recovered only when the complete indexed set is unambiguous. Conflicting or multiple missing indexes fail closed. This handles the actual Gemini response observed during setup without weakening count, dimension, finite-value or nonzero-vector checks. A real Groq refusal omitted the citations field: that case now becomes an empty citation list, so the application returns its fixed insufficient-sources reply without delivering the model's text or charging a saved-answer slot. Malformed provider JSON/citation structure is a gateway error. The full regression passed 72/72 tests in three suites, including an application/real-PostgreSQL refusal-accounting case.
 
-Real Gemini/Groq setup probes, 24 handbook application checks and 46 Salary Plan/restriction/concurrency checks passed with synthetic text and the actual Docker Redis worker. See `live-demo-run.json`, `live-challenges-run.json` and `live-acceptance.md` for exact scope and remaining fault checks. A valid JSON response and accepted citation label do not independently establish factual grounding or prompt-injection resistance.
+Recorded live scenarios verified synthetic handbook processing/cited answers, restricted-file access and concurrent quota handling through the normal Redis worker. See [testing methods, actual outcomes and limits](testing.md). A valid JSON response and accepted citation label do not independently establish factual grounding or prompt-injection resistance.
 
 Primary references: [Groq free limits](https://console.groq.com/docs/rate-limits), [Groq compatible endpoint](https://console.groq.com/docs/openai), [Groq JSON mode](https://console.groq.com/docs/structured-outputs), [Gemini pricing and data use](https://ai.google.dev/gemini-api/docs/pricing), [Gemini compatible embeddings](https://ai.google.dev/gemini-api/docs/openai#embeddings), and [embedding dimensions](https://ai.google.dev/gemini-api/docs/embeddings#output_dimensionality).

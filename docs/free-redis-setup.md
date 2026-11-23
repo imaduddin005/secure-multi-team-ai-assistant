@@ -1,6 +1,6 @@
-# Free Redis for the local learning demo
+# Optional remote Redis setup
 
-Updated: 2026-11-21 (Asia/Karachi). This is an optional alternative when local Docker is unavailable. The learner's Docker engine subsequently recovered and the current demo uses **native PostgreSQL plus Compose Redis**, with a passed Redis PING and actual BullMQ delivery canary in `live-redis-setup.json`. Upstash is not configured or required for that selected local runtime. A real Redis connection remains necessary; no fake queue is substituted.
+Configuration reference dated 2026-11-21. The default local runtime uses native PostgreSQL plus Compose Redis. This optional recipe is for a user-owned TLS Redis service when local Docker is unavailable; it does not claim that Upstash was provisioned or tested. A real Redis connection is required.
 
 ## User-owned Upstash Free database
 

@@ -57,3 +57,21 @@ learner-test-kit/
 !/output/pdf/
 /output/pdf/*
 !/output/pdf/secure-multi-team-ai-assistant-report-final.pdf
+
+# Keep only submission documentation; generated run logs stay local
+/docs/*
+!/docs/api.md
+!/docs/database-design.md
+!/docs/design-decisions.md
+!/docs/free-ai-setup.md
+!/docs/free-redis-setup.md
+!/docs/operations.md
+!/docs/requirements.md
+!/docs/testing.md
+!/docs/testing-results.json
+
+# Detailed editable ERD and one simplified picture
+/diagrams/*
+!/diagrams/schema.mmd
+!/diagrams/schema.svg
+!/diagrams/simple-er-diagram.png

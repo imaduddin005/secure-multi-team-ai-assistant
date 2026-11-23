@@ -1,5 +1,2 @@
-# Optional report generation/inspection tools, separate from application runtime.
-reportlab==4.4.9
-python-docx==1.2.0
-pypdf==6.21.4
+# Optional browser testing dependency, separate from the application runtime.
 playwright==1.62.0

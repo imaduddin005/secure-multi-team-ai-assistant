@@ -39,7 +39,6 @@
     "web:dev": "next dev apps/web --hostname 127.0.0.1",
     "web:build": "node --max-old-space-size=1536 node_modules/next/dist/bin/next build apps/web --webpack",
     "web:start": "next start apps/web --hostname 127.0.0.1",
-    "report:build": "python tools/create-word-report.py",
     "package:source": "python tools/package-source.py"
   },
   "dependencies": {

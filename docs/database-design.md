@@ -1,6 +1,6 @@
-# Architecture and database blueprint
+# Database design
 
-This document records the design-first blueprint and 21-table catalog. The SQL foundations and later API/worker/quota/chat modules are now implemented; current execution evidence is tracked in `module-progress.md` and `verification-evidence.md`. Historical future-tense wording below describes the original design contract, not a claim that those modules remain absent. Proposed business choices still require learner review; see `design-decisions.md`.
+This catalog describes the implemented PostgreSQL schema and principal relationships. SQL migrations in database/migrations are authoritative. Business rules and their reasons are in design-decisions.md; test methods, actual outcomes and limits are in testing.md.
 
 ## 1. Responsibilities and trust boundaries
 
@@ -36,7 +36,7 @@ Browser → API is untrusted input. API → PostgreSQL is a trusted identity-con
 
 ### users
 
-`id` PK; `auth_subject` UUID unique; `display_name`; `created_at`. The fixed deployment Auth issuer plus verified token `sub` identify this profile. No password, global role, or team list lives here. `auth_subject` is an external identity reference, **not** an FK to a remote Auth database. Local test fixtures do not prove a matching Auth account exists. Account-wide token/session invalidation semantics are separate from immediate membership revocation; a valid cached JWT can remain cryptographically valid until expiry. Module 2 must document that boundary and its verification strategy.
+`id` PK; `auth_subject` UUID unique; `display_name`; `created_at`. The fixed deployment Auth issuer plus verified token `sub` identify this profile. No password, global role, or team list lives here. `auth_subject` is an external identity reference, **not** an FK to a remote Auth database. Local test fixtures do not prove a matching Auth account exists. Account-wide token/session invalidation semantics are separate from immediate membership revocation; a valid cached JWT can remain cryptographically valid until expiry. Account/session invalidation boundaries are documented separately in operations.md.
 
 ### teams
 
@@ -270,4 +270,4 @@ At the final available slot, separate transactions both acquire the team gate; t
 
 Sara's HR membership is editor; her separate Engineering membership is viewer. Leave Policy is visible to her through HR membership; Salary Plan is absent from her list, counts, retrieval, and citations because it is restricted to Hina. Hina's explicit grant, not her admin role, authorizes Salary Plan content. Sara can read API Guide as an Engineering viewer but cannot upload there. Ahmed cannot read either HR document because no HR membership exists.
 
-If Hina grants Sara's HR membership Salary Plan read access, Sara can ask a grounded question in her own HR conversation. If that grant is revoked before final answer authorization, the generated answer is discarded without charging. If revoked after a successful answer, future history reads hide the entire affected answer, including uncited potential sources and previews. If Sara leaves/rejoins HR, a new membership cannot inherit that grant or conversation. None of these examples imply any rows, services, or protections have been implemented in Module 0.
+If Hina grants Sara's HR membership Salary Plan read access, Sara can ask a grounded question in her own HR conversation. If that grant is revoked before final answer authorization, the generated answer is discarded without charging. If revoked after a successful answer, future history reads hide the entire affected answer, including uncited potential sources and previews. If Sara leaves/rejoins HR, a new membership cannot inherit that grant or conversation. The example describes the implemented authorization rules; current test evidence and limits are documented in testing.md.
