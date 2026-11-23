@@ -1,0 +1,54 @@
+name: secure-multi-team-ai-assistant-db
+
+services:
+  postgres:
+    image: pgvector/pgvector:0.8.7-pg17
+    command: ["postgres", "-c", "cluster_name=secure-assistant-demo"]
+    environment:
+      POSTGRES_DB: assistant
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${LOCAL_POSTGRES_PASSWORD:?Run npm run db:local:init first}
+    ports:
+      - "127.0.0.1:55432:5432"
+    volumes:
+      - assistant_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d assistant"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+
+  postgres-test:
+    image: pgvector/pgvector:0.8.7-pg17
+    command: ["postgres", "-c", "cluster_name=secure-assistant-test"]
+    environment:
+      POSTGRES_DB: assistant_test
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${LOCAL_TEST_POSTGRES_PASSWORD:?Run npm run db:local:init first}
+    ports:
+      - "127.0.0.1:55433:5432"
+    volumes:
+      - assistant_test_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d assistant_test"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+
+  redis:
+    image: redis:7.4-alpine
+    command: ["redis-server", "--appendonly", "yes", "--maxmemory", "128mb", "--maxmemory-policy", "noeviction"]
+    ports:
+      - "127.0.0.1:6379:6379"
+    volumes:
+      - assistant_redisdata:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+
+volumes:
+  assistant_pgdata:
+  assistant_test_pgdata:
+  assistant_redisdata:

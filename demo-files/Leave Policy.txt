@@ -1,0 +1,4 @@
+TechCo Leave Policy - Synthetic training example
+Employees request planned leave through their HR manager at least five working days in advance.
+HR reviews a request and records the decision in the team's approved leave register.
+This invented policy is a learning fixture, not employment advice or a real company policy.

@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-21",
+  "timezone": "Asia/Karachi",
+  "authAccountBinding": "passed",
+  "realPasswordLogins": [
+    {
+      "person": "ali",
+      "passed": true
+    },
+    {
+      "person": "sara",
+      "passed": true
+    },
+    {
+      "person": "hina",
+      "passed": true
+    },
+    {
+      "person": "ahmed",
+      "passed": true
+    }
+  ],
+  "productionTokenVerification": [
+    {
+      "person": "ali",
+      "passed": true
+    },
+    {
+      "person": "sara",
+      "passed": true
+    },
+    {
+      "person": "hina",
+      "passed": true
+    },
+    {
+      "person": "ahmed",
+      "passed": true
+    }
+  ],
+  "liveStorageCanaryChecks": 12,
+  "browserLoginFlow": "not run in this check",
+  "aiAndRedisAcceptance": "pending"
+}

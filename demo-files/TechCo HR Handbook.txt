@@ -1,0 +1,35 @@
+TechCo HR Handbook - Synthetic Practice Document
+Version: Demo 1
+This is invented training data for the project. It contains no real employee records.
+
+1. Working hours
+The working week is Monday to Friday. Office hours are 09:00 to 18:00, including a one-hour lunch break.
+
+2. Annual leave
+Each employee has 20 working days of annual leave per calendar year.
+
+3. Casual leave
+Each employee has 7 working days of casual leave per calendar year.
+
+4. Sick leave
+Each employee has 10 working days of sick leave per calendar year. A medical certificate is required after more than 3 consecutive working days of sick leave.
+
+5. Planned leave requests
+Employees must send a planned leave request to their HR manager at least 5 working days in advance. HR records the written approval in the team's leave register.
+
+6. Emergency leave
+For an emergency, the employee must notify the HR manager on the same working day. HR records the final decision in the leave register.
+
+7. Remote work
+An employee may work remotely for up to 2 days per week with prior written approval from the line manager.
+
+8. Probation
+The probation period is 90 calendar days. HR issues written confirmation after the review.
+
+9. Reimbursements
+The monthly reimbursement limit is PKR 15,000 per employee. Submit receipts within 7 calendar days of the expense. Line-manager approval is required.
+
+10. HR contact
+The fictional training contact is hr@example.com. This example address is not a real company support inbox.
+
+This handbook is a learning fixture, not a real company policy or employment advice.

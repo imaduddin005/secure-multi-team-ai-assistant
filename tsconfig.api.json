@@ -1,0 +1,6 @@
+{
+  "extends": "./tsconfig.database.json",
+  "compilerOptions": { "experimentalDecorators": true, "emitDecoratorMetadata": true, "outDir": "dist", "types": ["node", "jest"] },
+  "include": ["apps/api/**/*.ts", "tools/**/*.ts", "tests/**/*.ts"],
+  "exclude": ["node_modules", "apps/web"]
+}

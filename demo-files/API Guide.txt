@@ -1,0 +1,4 @@
+TechCo API Guide - Synthetic training example
+Engineering clients send a bearer access token in the Authorization header.
+The server verifies identity and checks current team membership for every protected request.
+This example contains no API credentials or real endpoint secrets.

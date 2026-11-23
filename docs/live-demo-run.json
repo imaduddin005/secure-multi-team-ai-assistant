@@ -1,0 +1,114 @@
+{
+  "date": "2026-11-21",
+  "timezone": "Asia/Karachi",
+  "layer": "Running production API, native PostgreSQL, Docker Redis/BullMQ, Supabase Auth/Storage, Gemini and Groq",
+  "syntheticDataOnly": true,
+  "checks": [
+    {
+      "name": "Running API health",
+      "passed": true
+    },
+    {
+      "name": "Live identity/current roles: ali",
+      "passed": true
+    },
+    {
+      "name": "Live identity/current roles: sara",
+      "passed": true
+    },
+    {
+      "name": "Live identity/current roles: hina",
+      "passed": true
+    },
+    {
+      "name": "Live identity/current roles: ahmed",
+      "passed": true
+    },
+    {
+      "name": "Real private Storage upload accepted",
+      "passed": true
+    },
+    {
+      "name": "Real worker/Supabase/Gemini pipeline reached ready",
+      "passed": true
+    },
+    {
+      "name": "Authorized original download matches uploaded bytes",
+      "passed": true
+    },
+    {
+      "name": "Restricted handbook hidden from Ali list",
+      "passed": true
+    },
+    {
+      "name": "Known-version direct download denied to Ali",
+      "passed": true
+    },
+    {
+      "name": "Ali viewer upload denied by backend",
+      "passed": true
+    },
+    {
+      "name": "Sara Engineering viewer upload denied",
+      "passed": true
+    },
+    {
+      "name": "Engineering admin cannot enter HR",
+      "passed": true
+    },
+    {
+      "name": "Explicit grant enables Sara original download",
+      "passed": true
+    },
+    {
+      "name": "Real RAG answer has the handbook fact and citations",
+      "passed": true
+    },
+    {
+      "name": "Live citation returns supporting original excerpt",
+      "passed": true
+    },
+    {
+      "name": "Idempotent replay returns the same saved answer",
+      "passed": true
+    },
+    {
+      "name": "Successful answer appears in team quota usage",
+      "passed": true
+    },
+    {
+      "name": "Admin cannot read Sara private conversation",
+      "passed": true
+    },
+    {
+      "name": "Revocation hides the complete old assistant answer",
+      "passed": true
+    },
+    {
+      "name": "Revocation denies the old citation",
+      "passed": true
+    },
+    {
+      "name": "Revocation denies original download immediately",
+      "passed": true
+    },
+    {
+      "name": "Explicit team visibility enables Ali viewer read",
+      "passed": true
+    },
+    {
+      "name": "Admin audit records are available",
+      "passed": true
+    }
+  ],
+  "demoHandbookRetained": true,
+  "temporaryGrantRemoved": true,
+  "testConversationPurged": true,
+  "limits": [
+    "This is one synthetic live scenario, not a full adversarial model or outage-recovery evaluation.",
+    "A successful saved answer consumes an application quota slot; deletion does not refund it.",
+    "Browser automation is separate; this runner uses authenticated HTTP."
+  ],
+  "finalHandbookVisibility": "team (explicit Hina admin action after restricted-access tests)",
+  "success": true
+}

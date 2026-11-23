@@ -1,0 +1,127 @@
+{
+  "date": "2026-11-23",
+  "timezone": "Asia/Karachi",
+  "syntheticDataOnly": true,
+  "layer": "Normal running API, PostgreSQL, Supabase Auth/private Storage, Redis/BullMQ worker, Gemini and Groq",
+  "checks": [
+    {
+      "name": "Running API health",
+      "passed": true
+    },
+    {
+      "name": "Ahmed is the current Engineering administrator",
+      "passed": true
+    },
+    {
+      "name": "Engineering has Ahmed admin, Sara viewer and no editor",
+      "passed": true
+    },
+    {
+      "name": "Ahmed upload provides an immutable document/version identity",
+      "passed": true
+    },
+    {
+      "name": "Real Redis worker and Gemini processed Engineering file to ready",
+      "passed": true
+    },
+    {
+      "name": "Engineering original matches the supplied synthetic bytes",
+      "passed": true
+    },
+    {
+      "name": "Ahmed explicitly made the practice file Engineering-team visible",
+      "passed": true
+    },
+    {
+      "name": "HR viewer Ali cannot list Engineering documents",
+      "passed": true
+    },
+    {
+      "name": "Known Engineering original URL does not bypass Ali team boundary",
+      "passed": true
+    },
+    {
+      "name": "Engineering administrator Ahmed cannot enter HR",
+      "passed": true
+    },
+    {
+      "name": "Real Engineering RAG answers 15 minutes with citations",
+      "passed": true
+    },
+    {
+      "name": "Engineering citation exposes the authorized supporting excerpt",
+      "passed": true
+    },
+    {
+      "name": "Real answer feedback is accepted for the owning administrator",
+      "passed": true
+    },
+    {
+      "name": "Engineering same-key replay returns the same saved message",
+      "passed": true
+    },
+    {
+      "name": "Saved Engineering answer is reflected in application quota",
+      "passed": true
+    },
+    {
+      "name": "Engineering administrator can inspect audit records",
+      "passed": true
+    },
+    {
+      "name": "Sara remains Engineering viewer and HR editor",
+      "passed": true
+    },
+    {
+      "name": "Sara viewer sees the shared Engineering practice file",
+      "passed": true
+    },
+    {
+      "name": "Sara viewer can download the Engineering original",
+      "passed": true
+    },
+    {
+      "name": "Sara viewer upload is rejected by the backend",
+      "passed": true
+    },
+    {
+      "name": "Sara viewer cannot open Engineering administration",
+      "passed": true
+    },
+    {
+      "name": "Sara viewer gets the one-approval fact with a real citation",
+      "passed": true
+    },
+    {
+      "name": "Engineering admin cannot read Sara private chat",
+      "passed": true
+    }
+  ],
+  "pending": [],
+  "cleanup": {
+    "testConversationsCreated": 2,
+    "testConversationsPurged": 2,
+    "rolesPreserved": true
+  },
+  "limitations": [
+    "The fictional handbook is a question source, not proof that CI, release automation or incident operations are implemented.",
+    "Saved grounded test answers use the real application quota; deletion does not refund them.",
+    "This is authenticated HTTP, not an automated live-browser or fault-injection run."
+  ],
+  "engineeringRoles": [
+    {
+      "name": "Sara",
+      "role": "viewer"
+    },
+    {
+      "name": "Ahmed",
+      "role": "admin"
+    }
+  ],
+  "provisioning": "New synthetic Engineering document uploaded by Ahmed.",
+  "practiceFileReady": true,
+  "finalVisibility": "Engineering team",
+  "viewerChecksPassed": true,
+  "success": true,
+  "status": "passed"
+}

@@ -1,0 +1,210 @@
+---
+title: Secure Multi-Team AI Assistant - proposed relational schema
+config:
+  theme: neutral
+  er:
+    useMaxWidth: false
+    fontSize: 14
+---
+erDiagram
+    direction TB
+
+    organizations {
+        uuid id PK
+        text slug UK
+        text name
+    }
+    users {
+        uuid id PK
+        uuid auth_subject UK
+        text display_name
+    }
+    teams {
+        uuid id PK
+        uuid organization_id FK
+        text slug
+        bigint authz_epoch
+    }
+    memberships {
+        uuid id PK
+        uuid team_id FK
+        uuid user_id FK
+        text role
+        timestamptz removed_at "null means active"
+    }
+    documents {
+        uuid id PK
+        uuid team_id FK
+        uuid created_by_membership_id FK
+        text title "protected"
+        text visibility "restricted by default"
+        uuid current_version_id FK "nullable"
+        timestamptz deleted_at "tombstone"
+    }
+    document_grants {
+        uuid id PK
+        uuid team_id FK
+        uuid document_id FK
+        uuid grantee_membership_id FK
+        timestamptz revoked_at "null means unrevoked"
+    }
+    embedding_profiles {
+        uuid id PK
+        text profile_key UK
+        text provider_id
+        text model_id
+        int dimensions
+        text chunker_version
+    }
+    storage_intents {
+        uuid id PK
+        uuid team_id FK
+        uuid uploader_membership_id FK
+        uuid target_document_id FK "nullable replacement"
+        text object_key UK "internal"
+        text state
+        bigint lease_token
+    }
+    document_versions {
+        uuid id PK
+        uuid team_id FK
+        uuid document_id FK
+        uuid storage_intent_id FK,UK
+        uuid embedding_profile_id FK "nullable until processing"
+        int version_number
+        text state
+    }
+    document_chunks {
+        uuid id PK
+        uuid team_id FK
+        uuid document_id FK
+        uuid version_id FK
+        int chunk_ordinal
+        text content_text "protected"
+        vector embedding
+    }
+    processing_jobs {
+        uuid id PK
+        uuid team_id FK
+        uuid document_id FK "kind-dependent"
+        uuid version_id FK "kind-dependent"
+        uuid storage_intent_id FK "kind-dependent"
+        text state
+        bigint lease_token
+    }
+    outbox_events {
+        uuid id PK
+        uuid team_id FK
+        uuid job_id FK
+        text dedupe_key UK
+        text state
+    }
+    conversations {
+        uuid id PK
+        uuid team_id FK
+        uuid owner_membership_id FK
+        timestamptz deleted_at
+    }
+    messages {
+        uuid id PK
+        uuid team_id FK
+        uuid owner_membership_id FK
+        uuid conversation_id FK
+        uuid request_id FK
+        text kind
+        timestamptz permanently_unavailable_at
+    }
+    message_sources {
+        uuid id PK
+        uuid team_id FK
+        uuid message_id FK
+        uuid document_id FK
+        uuid version_id FK
+        uuid chunk_id FK "nullable after safe purge"
+        boolean is_cited
+    }
+    feedback {
+        uuid id PK
+        uuid team_id FK
+        uuid user_id FK
+        uuid owner_membership_id FK
+        uuid message_id FK
+        text rating
+    }
+    usage_budgets {
+        uuid team_id PK,FK
+        int monthly_answer_limit "default 1000"
+        bigint revision
+    }
+    usage_periods {
+        uuid id PK
+        uuid team_id FK
+        timestamptz period_start "UTC month"
+        bigint used_count
+        bigint held_count
+    }
+    usage_reservations {
+        uuid id PK
+        uuid team_id FK
+        uuid owner_membership_id FK
+        uuid conversation_id FK
+        text idempotency_key
+        text status
+        int current_attempt_number FK "deferred pointer"
+    }
+    usage_attempts {
+        uuid id PK
+        uuid team_id FK
+        uuid reservation_id FK
+        uuid period_id FK
+        int attempt_number "fence"
+        text state
+        timestamptz lease_expires_at
+    }
+    audit_logs {
+        uuid id PK
+        uuid team_id FK "nullable before authentication"
+        uuid actor_user_id FK "nullable system actor"
+        uuid actor_membership_id FK "nullable"
+        text action
+        text target_type
+        uuid target_id "generic reference - no FK"
+    }
+
+    organizations ||--o{ teams : contains
+    users ||--o{ memberships : joins_through
+    teams ||--o{ memberships : has
+    teams ||--o{ documents : scopes
+    memberships ||--o{ documents : uploads
+    documents ||--o{ document_grants : restricts_with
+    memberships ||--o{ document_grants : receives
+    memberships ||--o{ storage_intents : allocates
+    documents o|--o{ storage_intents : replacement_target
+    storage_intents ||--o| document_versions : attaches_to
+    documents ||--o{ document_versions : revises
+    documents o|--o| document_versions : current_pointer
+    embedding_profiles o|--o{ document_versions : defines_space
+    document_versions ||--o{ document_chunks : contains
+    documents o|--o{ processing_jobs : process_or_purge
+    document_versions o|--o| processing_jobs : process_job
+    storage_intents o|--o| processing_jobs : orphan_cleanup
+    processing_jobs ||--o| outbox_events : dispatches
+    memberships ||--o{ conversations : privately_owns
+    conversations ||--o{ usage_reservations : scopes_requests
+    conversations ||--o{ messages : contains
+    usage_reservations ||--o{ messages : user_assistant_pair
+    messages ||--o{ message_sources : records_all_context
+    documents ||--o{ message_sources : supports
+    document_versions ||--o{ message_sources : pins_history
+    document_chunks o|--o{ message_sources : potential_source
+    messages ||--o| feedback : owner_rates
+    memberships ||--o{ feedback : submits
+    teams ||--|| usage_budgets : initializes
+    teams ||--o{ usage_periods : counts_months
+    memberships ||--o{ usage_reservations : requests
+    usage_reservations ||--o{ usage_attempts : retries_with_fence
+    usage_periods ||--o{ usage_attempts : accounts_for
+    usage_reservations o|--o| usage_attempts : current_attempt
+    teams o|--o{ audit_logs : scopes_events
+    users o|--o{ audit_logs : acts
+    memberships o|--o{ audit_logs : acts_in_team

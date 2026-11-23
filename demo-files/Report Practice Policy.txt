@@ -1,0 +1,8 @@
+Report Practice Policy
+Synthetic data for manual feature testing only.
+
+The training reference code is REPORT-742.
+The induction session lasts 45 minutes.
+The maximum training group size is 12 people.
+
+This document contains invented facts and no real employee data.

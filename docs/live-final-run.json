@@ -1,0 +1,284 @@
+{
+  "date": "2026-11-23",
+  "timezone": "Asia/Karachi",
+  "runId": "c6fc2790-a564-4c7c-914b-2936cefccb03",
+  "syntheticOnly": true,
+  "layer": "Real running API/PostgreSQL, Supabase Auth/private Storage, Redis/BullMQ, Gemini and Groq; authenticated HTTP, not browser automation",
+  "checks": [
+    {
+      "name": "Ledger observer is read-only on the identified demo cluster",
+      "passed": true
+    },
+    {
+      "name": "API process responds; protected readiness checked separately",
+      "passed": true
+    },
+    {
+      "name": "No bearer token cannot read teams",
+      "passed": true
+    },
+    {
+      "name": "Ali fresh hosted login and current team lookup",
+      "passed": true
+    },
+    {
+      "name": "Sara fresh hosted login and current team lookup",
+      "passed": true
+    },
+    {
+      "name": "Hina fresh hosted login and current team lookup",
+      "passed": true
+    },
+    {
+      "name": "Ahmed fresh hosted login and current team lookup",
+      "passed": true
+    },
+    {
+      "name": "Deliberately wrong password rejected by hosted Auth",
+      "passed": true
+    },
+    {
+      "name": "Sara is HR editor and Engineering viewer",
+      "passed": true
+    },
+    {
+      "name": "Viewer administration and reverse cross-team access denied by backend",
+      "passed": true
+    },
+    {
+      "name": "Learner original preserved and matched to the supplied synthetic fixture",
+      "passed": true
+    },
+    {
+      "name": "Learner practice baseline is Ready and Hina-only restricted",
+      "passed": true
+    },
+    {
+      "name": "Test number 03 is rejected as an invalid document UUID",
+      "passed": true
+    },
+    {
+      "name": "Correct-title search excludes the restricted practice document",
+      "passed": true
+    },
+    {
+      "name": "Known correct document and original IDs do not bypass private access",
+      "passed": true
+    },
+    {
+      "name": "Private question yields insufficient sources without private code or charge",
+      "passed": true
+    },
+    {
+      "name": "Explicit grant to Ali enables the intended file and matching original",
+      "passed": true
+    },
+    {
+      "name": "Granted Ali receives REPORT-742 with real supporting citations",
+      "passed": true
+    },
+    {
+      "name": "Citation contains the authorized practice reference",
+      "passed": true
+    },
+    {
+      "name": "Feedback persisted in real PostgreSQL",
+      "passed": true
+    },
+    {
+      "name": "Same-key replay returns the same saved message",
+      "passed": true
+    },
+    {
+      "name": "Recorded model evidence excludes hidden Salary Plan and other-team files",
+      "passed": true
+    },
+    {
+      "name": "Grant audit identifies the actual Hina profile and target",
+      "passed": true
+    },
+    {
+      "name": "Revocation hides the whole saved private answer and its citations",
+      "passed": true
+    },
+    {
+      "name": "Revoked citation, original and answer feedback return generic denial",
+      "passed": true
+    },
+    {
+      "name": "Revoked request replay cannot return the old private answer",
+      "passed": true
+    },
+    {
+      "name": "Team administrator cannot read another member private conversation",
+      "passed": true
+    },
+    {
+      "name": "Unsupported JSON upload rejected before processing",
+      "passed": true
+    },
+    {
+      "name": "Two actual simultaneous uploads produce distinct document and version IDs",
+      "passed": true
+    },
+    {
+      "name": "Both real Redis/Storage/Gemini upload pipelines reach Ready",
+      "passed": true
+    },
+    {
+      "name": "Parallel uploads have separate nonduplicated chunk sets",
+      "passed": true
+    },
+    {
+      "name": "Both concurrent originals match their respective synthetic bytes",
+      "passed": true
+    },
+    {
+      "name": "Admin has no implicit read of editor restricted upload",
+      "passed": true
+    },
+    {
+      "name": "Explicit audited admin self-grant enables editor fixture read",
+      "passed": true
+    },
+    {
+      "name": "Self-grant revocation removes admin content access",
+      "passed": true
+    },
+    {
+      "name": "Explicit team visibility enables the HR viewer",
+      "passed": true
+    },
+    {
+      "name": "Team-visible remains private outside HR",
+      "passed": true
+    },
+    {
+      "name": "Synthetic v1 grounded answer before update",
+      "passed": true
+    },
+    {
+      "name": "Ready v2 activates while immutable v1 remains available",
+      "passed": true
+    },
+    {
+      "name": "Old citation keeps its original historical version",
+      "passed": true
+    },
+    {
+      "name": "New grounded answer uses the activated v2 fact",
+      "passed": true
+    },
+    {
+      "name": "Document deletion hides both old and new dependent answers",
+      "passed": true
+    },
+    {
+      "name": "Tombstone blocks original access immediately",
+      "passed": true
+    },
+    {
+      "name": "Existing Sara bearer loses upload permission immediately after demotion",
+      "passed": true
+    },
+    {
+      "name": "Sara HR editor role restored",
+      "passed": true
+    },
+    {
+      "name": "Unknown fact yields insufficient sources without successful-answer charge",
+      "passed": true
+    },
+    {
+      "name": "Zero remaining slots return the specific team-quota HTTP 429",
+      "passed": true
+    },
+    {
+      "name": "Two requests competing for the last slot yield one 201 and one 429",
+      "passed": true
+    },
+    {
+      "name": "Last-slot pair records exactly one charge and no held remainder",
+      "passed": true
+    },
+    {
+      "name": "Malicious source actually reached the real-model evidence manifest",
+      "passed": true
+    },
+    {
+      "name": "One real-model malicious-document probe does not obey injected instruction or expose hidden source",
+      "passed": true
+    }
+  ],
+  "cleanup": {
+    "budgetRestored": true,
+    "createdSyntheticDocuments": 3,
+    "tombstonedSyntheticDocuments": 3,
+    "testConversationsCreated": 7,
+    "testConversationsPurged": 7,
+    "rolesRestored": true,
+    "learnerPracticeReadersPreserved": true,
+    "learnerPracticeOriginalPreserved": true,
+    "workerPurgeJobsSucceeded": true
+  },
+  "limitations": [
+    "One malicious document is a small real-model probe, not injection immunity.",
+    "Delete during generation is proven separately by deterministic real-PostgreSQL tests with controlled providers; this run tests deletion after a saved answer.",
+    "No intentional shared Redis outage, clock change, production load, backup/restore or arbitrary hosted fault injection.",
+    "Successful saved answers remain charged after test-chat deletion.",
+    "Learner screenshots are not reclassified as agent-run successes."
+  ],
+  "initialUsage": {
+    "limit": 1000,
+    "used": 11,
+    "held": 0
+  },
+  "practiceOriginalSHA256": "f9981a52558db2f9377c893dd4d13704259c31b81ecc14bf4203740c5cfd94b5",
+  "parallelUploads": {
+    "people": [
+      "Hina HR admin",
+      "Sara HR editor"
+    ],
+    "readyCount": 2,
+    "elapsedMilliseconds": 6797
+  },
+  "lastTemporaryLimit": 15,
+  "lastSlot": {
+    "statuses": [
+      201,
+      429
+    ],
+    "charged": 1
+  },
+  "maliciousSource": {
+    "supplied": true,
+    "kind": "grounded",
+    "instructionMarkerReturned": false,
+    "groundedExpectedFact": true,
+    "hiddenSalarySourceSupplied": false
+  },
+  "finalUsage": {
+    "limit": 1000,
+    "used": 16,
+    "held": 0
+  },
+  "success": true,
+  "sourceSHA256": {
+    "tools/check-live-final.mjs": "ccf3bc0002e5e1d466fd41bbfe071c0469df389d3aad038aa987f870367939e9",
+    "demo-files/Report Practice Policy.txt": "f9981a52558db2f9377c893dd4d13704259c31b81ecc14bf4203740c5cfd94b5"
+  },
+  "priorRunnerAttempts": [
+    {
+      "file": "live-final-initial-failure.json",
+      "cause": "Runner assumed a nonexistent isCurrent version field; corrected to documents.currentVersionId. No mutation occurred."
+    },
+    {
+      "file": "live-final-runner-contract-failure.json",
+      "cause": "Runner expected insufficient rather than actual insufficient_sources. Refusal disclosed no private code and used no successful-answer quota; test chat purged."
+    },
+    {
+      "file": "live-final-observer-failure.json",
+      "cause": "Read-only observer initially omitted SET ROLE app_owner. API feedback was accepted; SQL observation failed. Grant and chat cleaned. One saved answer remained charged."
+    }
+  ]
+}

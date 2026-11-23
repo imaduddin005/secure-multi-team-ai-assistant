@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-21",
+  "timezone": "Asia/Karachi",
+  "syntheticInputOnly": true,
+  "liveEmbeddingsPassed": true,
+  "liveCitedAnswerPassed": true,
+  "embeddingModel": "gemini-embedding-2",
+  "answerModel": "openai/gpt-oss-20b",
+  "configuredDimensions": 768,
+  "observedDimensions": 768,
+  "diagnostics": {
+    "gemini": {
+      "httpStatus": 200
+    },
+    "groq": {
+      "httpStatus": 200
+    }
+  },
+  "completeDocumentWorkerBrowserAcceptance": "pending",
+  "embeddingInputCount": 2,
+  "embeddingResponseCompatibility": "Input-ordered rows and unambiguous omitted-zero indexes supported; conflicting or ambiguous indexes rejected."
+}

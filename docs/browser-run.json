@@ -1,0 +1,66 @@
+{
+  "executedAtUTC": "2026-11-21T05:51:46.138578+00:00",
+  "command": "python tests/browser/smoke.py",
+  "layer": "Real Chrome, Next.js, NestJS and isolated PostgreSQL; test-only Auth/AI/Storage; direct test SQL job dispatch, not Redis",
+  "checks": [
+    {
+      "name": "Production login fails closed without real public Auth settings; desktop layout fits",
+      "status": "passed"
+    },
+    {
+      "name": "Production login fits a mobile viewport",
+      "status": "passed"
+    },
+    {
+      "name": "Viewer sees authorized documents, hidden restricted title and no upload control",
+      "status": "passed"
+    },
+    {
+      "name": "Viewer asks through the real API, inspects source and saves optional feedback",
+      "status": "passed"
+    },
+    {
+      "name": "Sign-out clears protected screens",
+      "status": "passed"
+    },
+    {
+      "name": "Editor upload, real SQL processing, ready status, versions and private download work",
+      "status": "passed"
+    },
+    {
+      "name": "Sara changes from HR editor to Engineering viewer and old protected state clears",
+      "status": "passed"
+    },
+    {
+      "name": "Grant revocation hides an entire old answer and citation controls after refresh",
+      "status": "passed"
+    },
+    {
+      "name": "Admin has no implicit read of another uploader's restricted document",
+      "status": "passed"
+    },
+    {
+      "name": "Admin cannot see another membership's private conversation",
+      "status": "passed"
+    },
+    {
+      "name": "Admin changes a real SQL quota and sees its safe audit event",
+      "status": "passed"
+    },
+    {
+      "name": "Quota denial is displayed without a generated answer",
+      "status": "passed"
+    },
+    {
+      "name": "Authenticated workspace fits a mobile viewport",
+      "status": "passed"
+    },
+    {
+      "name": "No uncaught browser JavaScript errors in tested flows",
+      "status": "passed"
+    }
+  ],
+  "passed": 14,
+  "liveSupabaseAI": false,
+  "liveRedis": false
+}

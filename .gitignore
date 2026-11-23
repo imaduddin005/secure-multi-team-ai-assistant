@@ -1,0 +1,59 @@
+# Real configuration and credentials
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Dependencies, generated application output, and local tools
+node_modules/
+.next/
+dist/
+build/
+coverage/
+.cache/
+.tmp/
+playwright-report/
+test-results/
+
+# Runtime content must never enter source packages
+runtime/
+uploads/
+storage-data/
+postgres-data/
+redis-data/
+*.log
+*.dump
+*.sql.gz
+*.dmp
+*.heapsnapshot
+*.cpuprofile
+report.*.json
+core
+core.*
+
+# OS/editor state
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Python and TypeScript caches
+__pycache__/
+*.py[cod]
+*.tsbuildinfo
+
+# Local handoff archives and private/manual practice workspace
+deliverables/
+learner-test-kit/
+
+# Publish only the user's approved final report from generated output
+/output/*
+!/output/pdf/
+/output/pdf/*
+!/output/pdf/secure-multi-team-ai-assistant-report-final.pdf

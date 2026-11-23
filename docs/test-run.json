@@ -1,0 +1,497 @@
+{
+  "startedAtUTC": "2026-11-21T10:43:00.720000+00:00",
+  "command": "npm run test:all",
+  "node": "v24.12.0",
+  "database": "Real project-local PostgreSQL 18.4 + pgvector 0.8.7, isolated test cluster",
+  "packages": {
+    "@nestjs/core": "11.2.11",
+    "pg": "8.16.3",
+    "jest": "29.7.0",
+    "pdf-parse": "2.4.5",
+    "jose": "6.2.18",
+    "@supabase/supabase-js": "2.119.1",
+    "bullmq": "6.7.8"
+  },
+  "suites": {
+    "passed": 3,
+    "total": 3
+  },
+  "tests": {
+    "passed": 72,
+    "total": 72,
+    "skipped": 0
+  },
+  "limits": [
+    "JWT tests use a local cryptographically verified JWKS fixture, not live Supabase Auth.",
+    "AI and original-file Storage tests use explicit test-only adapters.",
+    "PostgreSQL outbox tests do not establish real Redis/BullMQ transport recovery.",
+    "Actual PDF extraction is tested with synthetic text and no-text files.",
+    "Prior-period ledger settlement is tested; actual timed UTC rollover is not injected.",
+    "Live Supabase bucket policies, real provider behavior and live authenticated browser acceptance remain separate from the browser fixtures."
+  ],
+  "cases": [
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 2: real JWT signatures, expiry/issuer and current membership roles",
+      "status": "passed",
+      "durationMs": 1918
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 2: demotion/removal/rejoin changes permissions immediately and keeps chats private",
+      "status": "passed",
+      "durationMs": 2452
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 3: restricted upload, viewer rejection, neutral denial and cross-team downloads",
+      "status": "passed",
+      "durationMs": 3148
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 3: blind grant actions do not enumerate hidden documents and self-grant is explicit",
+      "status": "passed",
+      "durationMs": 3538
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 3/4: simultaneous uploads and duplicate processing have distinct IDs and one chunk set",
+      "status": "passed",
+      "durationMs": 3173
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 4: newer completion wins and failed update preserves the previous ready version",
+      "status": "passed",
+      "durationMs": 2975
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 4: durable dispatch survives publication acknowledgement/lost queue delivery",
+      "status": "passed",
+      "durationMs": 4137
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 3/4: storage failure leaves durable cleanup intent and safe retryable purge",
+      "status": "passed",
+      "durationMs": 2667
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 5: final quota slot has one real-transaction winner",
+      "status": "passed",
+      "durationMs": 2138
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 5: expired attempt fences late completion and cancellation; reaper releases once",
+      "status": "passed",
+      "durationMs": 3493
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 6: grounded chat, displayed citations, feedback and completed idempotent replay",
+      "status": "passed",
+      "durationMs": 2925
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 6: no evidence is fixed, uncharged, with no model invocation",
+      "status": "passed",
+      "durationMs": 2134
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 6: readable context with an uncited refusal uses the fixed reply and no quota charge",
+      "status": "passed",
+      "durationMs": 2901
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 6: fabricated citations reject the answer and release its hold",
+      "status": "passed",
+      "durationMs": 2356
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 6: revocation committed during generation prevents delivery/save/charge",
+      "status": "passed",
+      "durationMs": 2438
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 6: uncited potential source controls old history, feedback and replay",
+      "status": "passed",
+      "durationMs": 3403
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 4/6: deletion invalidates answers before physical chunks/files purge",
+      "status": "passed",
+      "durationMs": 3118
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 7: viewer admin routes denied, audit content safe and quota changes audited",
+      "status": "passed",
+      "durationMs": 1481
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 3: authorized search filters before pagination and never reveals restricted titles",
+      "status": "passed",
+      "durationMs": 2382
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 3/4: successful PUT followed by lost permission is reconciled without an exposed document",
+      "status": "passed",
+      "durationMs": 2085
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 4: delayed PUT after cleanup is swept again and failed cleanup has bounded retries",
+      "status": "passed",
+      "durationMs": 1626
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 4: deleted or expired processing fence cannot activate late work",
+      "status": "passed",
+      "durationMs": 2253
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 4: real PDF extraction keeps page citations and rejects image-only/invalid PDFs",
+      "status": "passed",
+      "durationMs": 7569
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 4: changed original bytes cannot become ready content",
+      "status": "passed",
+      "durationMs": 2135
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 4: concurrent incompatible profiles cannot both activate across teams",
+      "status": "passed",
+      "durationMs": 2035
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 4: Redis URLs decode credentials and support TLS/IPv6 without accepting other protocols",
+      "status": "passed",
+      "durationMs": 1532
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 5: lower budget honors an existing hold and blocks new reservations",
+      "status": "passed",
+      "durationMs": 2740
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 5: settlement uses the reserved period while a new request uses the current UTC period",
+      "status": "passed",
+      "durationMs": 2460
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 6: deletion during provider generation prevents the answer and charge",
+      "status": "passed",
+      "durationMs": 2232
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 6: newer current version during generation blocks stale delivery",
+      "status": "passed",
+      "durationMs": 2161
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 6: historical citations keep their original version and feedback upserts",
+      "status": "passed",
+      "durationMs": 2702
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 6: final answer transaction orders before a waiting revocation; later history is hidden",
+      "status": "passed",
+      "durationMs": 3065
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 6: malicious source stays data, hidden team content is absent, and private chats stay private",
+      "status": "passed",
+      "durationMs": 2820
+    },
+    {
+      "file": "tests/api/application.test.ts",
+      "test": "Module 6: provider failure releases the hold and conversation deletion purges private text",
+      "status": "passed",
+      "durationMs": 2709
+    },
+    {
+      "file": "tests/database/boundaries.test.ts",
+      "test": "schema: all 21 business tables force RLS and real pgvector is installed",
+      "status": "passed",
+      "durationMs": 968
+    },
+    {
+      "file": "tests/database/boundaries.test.ts",
+      "test": "roles: actual runtime logins are non-owner/NOBYPASSRLS and cannot assume privileged roles",
+      "status": "passed",
+      "durationMs": 1210
+    },
+    {
+      "file": "tests/database/boundaries.test.ts",
+      "test": "RLS: missing/malformed identity context fails closed and transaction context resets",
+      "status": "passed",
+      "durationMs": 1193
+    },
+    {
+      "file": "tests/database/boundaries.test.ts",
+      "test": "RLS: TechCo read matrix hides restricted and cross-team titles even for admins",
+      "status": "passed",
+      "durationMs": 1200
+    },
+    {
+      "file": "tests/database/boundaries.test.ts",
+      "test": "privileges: viewers/admins have no direct DML, storage locator, DDL, or audit append capability",
+      "status": "passed",
+      "durationMs": 1620
+    },
+    {
+      "file": "tests/database/boundaries.test.ts",
+      "test": "privileges: worker cannot read private messages; policy helper cannot read source text",
+      "status": "passed",
+      "durationMs": 2250
+    },
+    {
+      "file": "tests/database/boundaries.test.ts",
+      "test": "migrations/seed: checksums make reruns no-ops and existing role/budget changes are preserved",
+      "status": "passed",
+      "durationMs": 1740
+    },
+    {
+      "file": "tests/database/boundaries.test.ts",
+      "test": "membership: duplicate active membership and last-admin demotion/removal are rejected",
+      "status": "passed",
+      "durationMs": 1460
+    },
+    {
+      "file": "tests/database/boundaries.test.ts",
+      "test": "membership: removal revokes grants; rejoin uses new ID and cannot restore old membership",
+      "status": "passed",
+      "durationMs": 1454
+    },
+    {
+      "file": "tests/database/boundaries.test.ts",
+      "test": "membership concurrency: two connections cannot demote both final admins",
+      "status": "passed",
+      "durationMs": 2120
+    },
+    {
+      "file": "tests/database/boundaries.test.ts",
+      "test": "constraints: cross-team and removed-membership grants are rejected",
+      "status": "passed",
+      "durationMs": 1034
+    },
+    {
+      "file": "tests/database/boundaries.test.ts",
+      "test": "documents: default restricted visibility requires an initial uploader grant before commit",
+      "status": "passed",
+      "durationMs": 1781
+    },
+    {
+      "file": "tests/database/boundaries.test.ts",
+      "test": "constraints: same-team storage attachment and version/chunk uniqueness are enforced",
+      "status": "passed",
+      "durationMs": 1533
+    },
+    {
+      "file": "tests/database/boundaries.test.ts",
+      "test": "constraints: cross-team chunks and embedding dimension mismatch are rejected",
+      "status": "passed",
+      "durationMs": 1559
+    },
+    {
+      "file": "tests/database/boundaries.test.ts",
+      "test": "versions: ready content is immutable and current version cannot regress",
+      "status": "passed",
+      "durationMs": 1863
+    },
+    {
+      "file": "tests/database/boundaries.test.ts",
+      "test": "versions: failed replacement preserves current-ready retrieval; historical chunks stay authorized",
+      "status": "passed",
+      "durationMs": 1517
+    },
+    {
+      "file": "tests/database/boundaries.test.ts",
+      "test": "chat foundations: another membership and even team admin cannot read a private conversation",
+      "status": "passed",
+      "durationMs": 2166
+    },
+    {
+      "file": "tests/database/boundaries.test.ts",
+      "test": "provenance: an uncited revoked source hides the whole answer, citations and feedback",
+      "status": "passed",
+      "durationMs": 2938
+    },
+    {
+      "file": "tests/database/boundaries.test.ts",
+      "test": "provenance: missing sources, uncited grounded answers and cross-team sources cannot finalize",
+      "status": "passed",
+      "durationMs": 3011
+    },
+    {
+      "file": "tests/database/boundaries.test.ts",
+      "test": "deletion: invalidate answer before provenance/chunk purge and reject stale resurrection",
+      "status": "passed",
+      "durationMs": 1871
+    },
+    {
+      "file": "tests/database/boundaries.test.ts",
+      "test": "constraints: source ownership and per-user feedback uniqueness are enforced",
+      "status": "passed",
+      "durationMs": 1688
+    },
+    {
+      "file": "tests/database/boundaries.test.ts",
+      "test": "quota foundations: UTC boundaries, scoped idempotency, nonnegative counters and one hold",
+      "status": "passed",
+      "durationMs": 2073
+    },
+    {
+      "file": "tests/database/boundaries.test.ts",
+      "test": "jobs/outbox: target consistency, duplicate logical jobs, and transaction rollback are real",
+      "status": "passed",
+      "durationMs": 1865
+    },
+    {
+      "file": "tests/database/boundaries.test.ts",
+      "test": "audit: mutations append safe actor/correlation records atomically without titles or content",
+      "status": "passed",
+      "durationMs": 1281
+    },
+    {
+      "file": "tests/database/boundaries.test.ts",
+      "test": "audit: hidden-document events are filtered before admin access and ordinary tampering is denied",
+      "status": "passed",
+      "durationMs": 1881
+    },
+    {
+      "file": "tests/api/providers.test.ts",
+      "test": "Module 4/6: separate provider endpoints fall back to the legacy shared endpoint",
+      "status": "passed",
+      "durationMs": 12
+    },
+    {
+      "file": "tests/api/providers.test.ts",
+      "test": "Module 4/6: mixed-provider HTTP requests keep keys, models and payloads on their own service",
+      "status": "passed",
+      "durationMs": 250
+    },
+    {
+      "file": "tests/api/providers.test.ts",
+      "test": "Module 4/6: embedding profiles change with embedding identity and stay stable when the answer provider changes",
+      "status": "passed",
+      "durationMs": 3
+    },
+    {
+      "file": "tests/api/providers.test.ts",
+      "test": "Module 6: provider refusal with omitted citations becomes an uncited result",
+      "status": "passed",
+      "durationMs": 8
+    },
+    {
+      "file": "tests/api/providers.test.ts",
+      "test": "Module 6: malformed provider citation labels are a gateway error, not a client validation error",
+      "status": "passed",
+      "durationMs": 22
+    },
+    {
+      "file": "tests/api/providers.test.ts",
+      "test": "Module 4: index-free compatible embedding responses preserve input order",
+      "status": "passed",
+      "durationMs": 11
+    },
+    {
+      "file": "tests/api/providers.test.ts",
+      "test": "Module 4: an omitted zero index is recovered without depending on response row order",
+      "status": "passed",
+      "durationMs": 11
+    },
+    {
+      "file": "tests/api/providers.test.ts",
+      "test": "Module 4: mixed-provider embeddings reject provider failure",
+      "status": "passed",
+      "durationMs": 81
+    },
+    {
+      "file": "tests/api/providers.test.ts",
+      "test": "Module 4: mixed-provider embeddings reject wrong dimensions",
+      "status": "passed",
+      "durationMs": 11
+    },
+    {
+      "file": "tests/api/providers.test.ts",
+      "test": "Module 4: mixed-provider embeddings reject duplicate indexes",
+      "status": "passed",
+      "durationMs": 20
+    },
+    {
+      "file": "tests/api/providers.test.ts",
+      "test": "Module 4: mixed-provider embeddings reject missing index conflicts with explicit zero",
+      "status": "passed",
+      "durationMs": 11
+    },
+    {
+      "file": "tests/api/providers.test.ts",
+      "test": "Module 4: mixed-provider embeddings reject multiple missing indexes",
+      "status": "passed",
+      "durationMs": 10
+    },
+    {
+      "file": "tests/api/providers.test.ts",
+      "test": "Module 4: mixed-provider embeddings reject zero vectors",
+      "status": "passed",
+      "durationMs": 8
+    }
+  ],
+  "sourceSHA256": {
+    "database/migrations/001_schema.sql": "109c9295b7dfb30a0d420692fbc6da03045c58c4fcd972d2a2d0d12c3a855294",
+    "database/migrations/002_security.sql": "c87abeb8bcce23c77e3c743207d5375717f4f07a80d2042ff376122e3bdc3241",
+    "database/migrations/003_integrity.sql": "df0df8a3d1a5b49a440e5f104386babd7caad40bb805ee11d5ab6a3592d0e5da",
+    "database/migrations/004_membership_api.sql": "0918ddffafb0483ffb33e81559d67a0405f43695f08ff9153d1c720e503e2717",
+    "database/migrations/005_document_api.sql": "6d451969adeddc51e00745cd37450186846768fa97f45cd4784cc25560e95804",
+    "database/migrations/006_processing_commands.sql": "ed7619c6cb9957b185d19cad311739e96a96a0e388ca3b6b4a411df05572da08",
+    "database/migrations/007_quota_commands.sql": "5e9035f87e3a886352bfe8aafc4b2cc61c82d479f805b45ea246aa78db29a162",
+    "database/migrations/008_chat_commands.sql": "4b851be8b9fda48199a5ac7fceb4df4cb2f294f973f0c33887e374a3ea0d93be",
+    "database/migrations/009_administration.sql": "47de987f041cb21de3770e615adba7d97123568ddf20a3b2e13efb95d3ed98c8",
+    "database/migrations/010_recovery_and_search.sql": "7614fde1e106164aeb18024e680d98e77ec13ac013a4a2647ed3a4e891cce731",
+    "apps/api/src/app.ts": "06af2c5677818e5f00432d19ee444715cd055ab8f962081aaf19e0e3d58b3396",
+    "apps/api/src/auth.ts": "1ecaf76c5e763d5c395aa7a3ba7c9d8f0392d3b1eed62809cb920212f3862122",
+    "apps/api/src/chat.controller.ts": "36e94745b08ae6736997c5e81819d33fddd91653feaa1eb843d75f48e07a0db0",
+    "apps/api/src/chat.ts": "6ff6bf36637fa85b27d23bc2ad90177ce771e4c6cae744cc5024fd7ce65ca035",
+    "apps/api/src/config.ts": "f4473a997be5545e4e8429a9cbb9ff1dc1827f6b7ed6063daebde688d8b89f63",
+    "apps/api/src/database.ts": "21eadc95cd7a6529eb2568ee69e0e8e91d1b3a8ee8f5c0f41cbdf4d538919b50",
+    "apps/api/src/documents.controller.ts": "61588a29113a9121aa442a7259a31587e042f7d3757fed467c83e71684d2e50d",
+    "apps/api/src/extract.worker.ts": "88ffd20454f2f2368b0e5bd31ad2ef4e20efc675e9cd1e1e23ae7922e3b6a60a",
+    "apps/api/src/main.ts": "ca3a8870aa16f7b26e927f23c143dece8dc9718c62c5054b4af2bdc207bf2409",
+    "apps/api/src/processing.ts": "37cfb2d52ff18a57dd14a32d1e2930fc148dd9cd64c287f132723ea8b08e566e",
+    "apps/api/src/providers.ts": "fdcc0775645df3209a3d7e33853d7b5c46c5316f9b1547f7f2136fc5db4e1269",
+    "apps/api/src/teams.controller.ts": "4a307fc1006ff9acb586b235c2b81a557e1b739965e72d622b0bc34d19e309e8",
+    "apps/api/src/types.ts": "297a261a00704d8222f04ba151a46e68d3df901abd4e8c86281a3f5239f723e8",
+    "apps/api/src/worker.ts": "06b4db2233340d7065cc22bebfa798e61eb93d8fb99936455f8989a9926eeebf",
+    "tests/api/application.test.ts": "31c58f1c108f643856acb717551156a9f9775bcb5244f8f11e27879430945ffe",
+    "tests/api/providers.test.ts": "9e367b1d31e28812b64d1cc9ab7aecfdd7db52b4d35e21eadb0e565e4f23e295",
+    "tests/browser/server.ts": "079eca67956dd6d392a2c5da6cabf085f004bcfbad9151679821d4a59a82a632",
+    "tests/database/boundaries.test.ts": "002df1086e7e605c19e62babc2a8511f74f02116e8adf5211e14592ac4efe576",
+    "tests/database/fixtures.ts": "82b4eda04191d98cf19ee79d0c4b60cfafc99edb336018796d1b36d3ca8631d7"
+  }
+}

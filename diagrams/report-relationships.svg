@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="738" height="404" preserveAspectRatio="xMinYMin meet" viewBox="0 0 738 404" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="738" height="404"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-404)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="212" width="359" height="192" rx="7" ry="7" style="stroke: rgb(78%,85%,82%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="12" y="386" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,40%,32%); stroke:none;" transform="translate(0,772) scale(1,-1)">Identity and team access</text>
+			<rect x="10" y="337" width="150" height="25" rx="3" ry="3" style="stroke: rgb(9%,40%,32%); stroke-linecap: butt; stroke-width: 0.6; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="60.91465" y="346" style="font-family: Helvetica; font-size: 8.1px;fill: rgb(9%,20%,17%); stroke:none;" transform="translate(0,692) scale(1,-1)">organizations</text>
+			<rect x="195" y="337" width="150" height="25" rx="3" ry="3" style="stroke: rgb(9%,40%,32%); stroke-linecap: butt; stroke-width: 0.6; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="258.97185" y="346" style="font-family: Helvetica; font-size: 8.1px;fill: rgb(9%,20%,17%); stroke:none;" transform="translate(0,692) scale(1,-1)">teams</text>
+			<rect x="10" y="260" width="150" height="25" rx="3" ry="3" style="stroke: rgb(9%,40%,32%); stroke-linecap: butt; stroke-width: 0.6; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="75.09775" y="269" style="font-family: Helvetica; font-size: 8.1px;fill: rgb(9%,20%,17%); stroke:none;" transform="translate(0,538) scale(1,-1)">users</text>
+			<rect x="195" y="260" width="150" height="25" rx="3" ry="3" style="stroke: rgb(9%,40%,32%); stroke-linecap: butt; stroke-width: 0.6; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="245.69595" y="269" style="font-family: Helvetica; font-size: 8.1px;fill: rgb(9%,20%,17%); stroke:none;" transform="translate(0,538) scale(1,-1)">memberships</text>
+			<path d="M 160,349.5 L 195,349.5 Z" style="stroke: rgb(32%,40%,37%); stroke-linecap: butt; stroke-width: 0.75;"/>
+			<polygon points="195 349.5, 191 347.5, 191 351.5" style="stroke: rgb(32%,40%,37%); stroke-linecap: butt; stroke-width: 1; fill: rgb(32%,40%,37%); fill-rule: evenodd;"/>
+			<text x="172.443" y="352.5" style="font-family: Helvetica; font-size: 6.5px;fill: rgb(32%,40%,37%); stroke:none;" transform="translate(0,705) scale(1,-1)">1:N</text>
+			<path d="M 160,272.5 L 195,272.5 Z" style="stroke: rgb(32%,40%,37%); stroke-linecap: butt; stroke-width: 0.75;"/>
+			<polygon points="195 272.5, 191 270.5, 191 274.5" style="stroke: rgb(32%,40%,37%); stroke-linecap: butt; stroke-width: 1; fill: rgb(32%,40%,37%); fill-rule: evenodd;"/>
+			<text x="172.443" y="275.5" style="font-family: Helvetica; font-size: 6.5px;fill: rgb(32%,40%,37%); stroke:none;" transform="translate(0,551) scale(1,-1)">1:N</text>
+			<path d="M 270,337 L 270,285 Z" style="stroke: rgb(32%,40%,37%); stroke-linecap: butt; stroke-width: 0.75;"/>
+			<polygon points="270 285, 268 289, 272 289" style="stroke: rgb(32%,40%,37%); stroke-linecap: butt; stroke-width: 1; fill: rgb(32%,40%,37%); fill-rule: evenodd;"/>
+			<text x="273.0" y="314.0" style="font-family: Helvetica; font-size: 6.5px;fill: rgb(32%,40%,37%); stroke:none;" transform="translate(0,628) scale(1,-1)">1:N</text>
+			<text x="12" y="231" style="font-family: Times-Roman; font-size: 8px;fill: rgb(32%,40%,37%); stroke:none;" transform="translate(0,462) scale(1,-1)">membership = one user + one team + current role</text>
+			<rect x="379" y="212" width="359" height="192" rx="7" ry="7" style="stroke: rgb(78%,85%,82%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="391" y="386" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,40%,32%); stroke:none;" transform="translate(0,772) scale(1,-1)">Documents, revisions and background work</text>
+			<rect x="389" y="344" width="150" height="25" rx="3" ry="3" style="stroke: rgb(9%,40%,32%); stroke-linecap: butt; stroke-width: 0.6; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="444.19145" y="353" style="font-family: Helvetica; font-size: 8.1px;fill: rgb(9%,20%,17%); stroke:none;" transform="translate(0,706) scale(1,-1)">documents</text>
+			<rect x="574" y="344" width="150" height="25" rx="3" ry="3" style="stroke: rgb(9%,40%,32%); stroke-linecap: butt; stroke-width: 0.6; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="617.7097" y="353" style="font-family: Helvetica; font-size: 8.1px;fill: rgb(9%,20%,17%); stroke:none;" transform="translate(0,706) scale(1,-1)">document_grants</text>
+			<rect x="389" y="307" width="150" height="25" rx="3" ry="3" style="stroke: rgb(9%,40%,32%); stroke-linecap: butt; stroke-width: 0.6; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="428.8865" y="316" style="font-family: Helvetica; font-size: 8.1px;fill: rgb(9%,20%,17%); stroke:none;" transform="translate(0,632) scale(1,-1)">document_versions</text>
+			<rect x="574" y="307" width="150" height="25" rx="3" ry="3" style="stroke: rgb(9%,40%,32%); stroke-linecap: butt; stroke-width: 0.6; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="613.6597" y="316" style="font-family: Helvetica; font-size: 8.1px;fill: rgb(9%,20%,17%); stroke:none;" transform="translate(0,632) scale(1,-1)">embedding_profiles</text>
+			<rect x="389" y="270" width="150" height="25" rx="3" ry="3" style="stroke: rgb(9%,40%,32%); stroke-linecap: butt; stroke-width: 0.6; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="431.13425" y="279" style="font-family: Helvetica; font-size: 8.1px;fill: rgb(9%,20%,17%); stroke:none;" transform="translate(0,558) scale(1,-1)">document_chunks</text>
+			<rect x="574" y="270" width="150" height="25" rx="3" ry="3" style="stroke: rgb(9%,40%,32%); stroke-linecap: butt; stroke-width: 0.6; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="621.31015" y="279" style="font-family: Helvetica; font-size: 8.1px;fill: rgb(9%,20%,17%); stroke:none;" transform="translate(0,558) scale(1,-1)">storage_intents</text>
+			<rect x="389" y="233" width="150" height="25" rx="3" ry="3" style="stroke: rgb(9%,40%,32%); stroke-linecap: butt; stroke-width: 0.6; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="434.73875" y="242" style="font-family: Helvetica; font-size: 8.1px;fill: rgb(9%,20%,17%); stroke:none;" transform="translate(0,484) scale(1,-1)">processing_jobs</text>
+			<rect x="574" y="233" width="150" height="25" rx="3" ry="3" style="stroke: rgb(9%,40%,32%); stroke-linecap: butt; stroke-width: 0.6; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="622.6588" y="242" style="font-family: Helvetica; font-size: 8.1px;fill: rgb(9%,20%,17%); stroke:none;" transform="translate(0,484) scale(1,-1)">outbox_events</text>
+			<path d="M 539,356.5 L 574,356.5 Z" style="stroke: rgb(32%,40%,37%); stroke-linecap: butt; stroke-width: 0.75;"/>
+			<polygon points="574 356.5, 570 354.5, 570 358.5" style="stroke: rgb(32%,40%,37%); stroke-linecap: butt; stroke-width: 1; fill: rgb(32%,40%,37%); fill-rule: evenodd;"/>
+			<text x="551.443" y="359.5" style="font-family: Helvetica; font-size: 6.5px;fill: rgb(32%,40%,37%); stroke:none;" transform="translate(0,719) scale(1,-1)">1:N</text>
+			<path d="M 464,344 L 464,332 Z" style="stroke: rgb(32%,40%,37%); stroke-linecap: butt; stroke-width: 0.75;"/>
+			<polygon points="464 332, 462 336, 466 336" style="stroke: rgb(32%,40%,37%); stroke-linecap: butt; stroke-width: 1; fill: rgb(32%,40%,37%); fill-rule: evenodd;"/>
+			<text x="467.0" y="341.0" style="font-family: Helvetica; font-size: 6.5px;fill: rgb(32%,40%,37%); stroke:none;" transform="translate(0,682) scale(1,-1)">1:N</text>
+			<path d="M 464,307 L 464,295 Z" style="stroke: rgb(32%,40%,37%); stroke-linecap: butt; stroke-width: 0.75;"/>
+			<polygon points="464 295, 462 299, 466 299" style="stroke: rgb(32%,40%,37%); stroke-linecap: butt; stroke-width: 1; fill: rgb(32%,40%,37%); fill-rule: evenodd;"/>
+			<text x="467.0" y="304.0" style="font-family: Helvetica; font-size: 6.5px;fill: rgb(32%,40%,37%); stroke:none;" transform="translate(0,608) scale(1,-1)">1:N</text>
+			<path d="M 574,319.5 L 539,319.5 Z" style="stroke: rgb(32%,40%,37%); stroke-linecap: butt; stroke-width: 0.75;"/>
+			<polygon points="539 319.5, 543 321.5, 543 317.5" style="stroke: rgb(32%,40%,37%); stroke-linecap: butt; stroke-width: 1; fill: rgb(32%,40%,37%); fill-rule: evenodd;"/>
+			<text x="551.443" y="322.5" style="font-family: Helvetica; font-size: 6.5px;fill: rgb(32%,40%,37%); stroke:none;" transform="translate(0,645) scale(1,-1)">1:N</text>
+			<path d="M 539,245.5 L 574,245.5 Z" style="stroke: rgb(32%,40%,37%); stroke-linecap: butt; stroke-width: 0.75;"/>
+			<polygon points="574 245.5, 570 243.5, 570 247.5" style="stroke: rgb(32%,40%,37%); stroke-linecap: butt; stroke-width: 1; fill: rgb(32%,40%,37%); fill-rule: evenodd;"/>
+			<text x="548.3685" y="248.5" style="font-family: Helvetica; font-size: 6.5px;fill: rgb(32%,40%,37%); stroke:none;" transform="translate(0,497) scale(1,-1)">1:0..1</text>
+			<rect x="0" y="0" width="359" height="192" rx="7" ry="7" style="stroke: rgb(78%,85%,82%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="12" y="174" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,40%,32%); stroke:none;" transform="translate(0,348) scale(1,-1)">Private conversations and source provenance</text>
+			<rect x="10" y="120" width="150" height="25" rx="3" ry="3" style="stroke: rgb(9%,40%,32%); stroke-linecap: butt; stroke-width: 0.6; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="60.01555" y="129" style="font-family: Helvetica; font-size: 8.1px;fill: rgb(9%,20%,17%); stroke:none;" transform="translate(0,258) scale(1,-1)">conversations</text>
+			<rect x="195" y="120" width="150" height="25" rx="3" ry="3" style="stroke: rgb(9%,40%,32%); stroke-linecap: butt; stroke-width: 0.6; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="251.54415" y="129" style="font-family: Helvetica; font-size: 8.1px;fill: rgb(9%,20%,17%); stroke:none;" transform="translate(0,258) scale(1,-1)">messages</text>
+			<rect x="10" y="41" width="150" height="25" rx="3" ry="3" style="stroke: rgb(9%,40%,32%); stroke-linecap: butt; stroke-width: 0.6; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="68.5651" y="50" style="font-family: Helvetica; font-size: 8.1px;fill: rgb(9%,20%,17%); stroke:none;" transform="translate(0,100) scale(1,-1)">feedback</text>
+			<rect x="195" y="41" width="150" height="25" rx="3" ry="3" style="stroke: rgb(9%,40%,32%); stroke-linecap: butt; stroke-width: 0.6; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="237.13830000000002" y="50" style="font-family: Helvetica; font-size: 8.1px;fill: rgb(9%,20%,17%); stroke:none;" transform="translate(0,100) scale(1,-1)">message_sources</text>
+			<path d="M 160,132.5 L 195,132.5 Z" style="stroke: rgb(32%,40%,37%); stroke-linecap: butt; stroke-width: 0.75;"/>
+			<polygon points="195 132.5, 191 130.5, 191 134.5" style="stroke: rgb(32%,40%,37%); stroke-linecap: butt; stroke-width: 1; fill: rgb(32%,40%,37%); fill-rule: evenodd;"/>
+			<text x="172.443" y="135.5" style="font-family: Helvetica; font-size: 6.5px;fill: rgb(32%,40%,37%); stroke:none;" transform="translate(0,271) scale(1,-1)">1:N</text>
+			<path d="M 270,120 L 270,66 Z" style="stroke: rgb(32%,40%,37%); stroke-linecap: butt; stroke-width: 0.75;"/>
+			<polygon points="270 66, 268 70, 272 70" style="stroke: rgb(32%,40%,37%); stroke-linecap: butt; stroke-width: 1; fill: rgb(32%,40%,37%); fill-rule: evenodd;"/>
+			<text x="273.0" y="96.0" style="font-family: Helvetica; font-size: 6.5px;fill: rgb(32%,40%,37%); stroke:none;" transform="translate(0,192) scale(1,-1)">1:N</text>
+			<path d="M 270,120 L 85,66 Z" style="stroke: rgb(32%,40%,37%); stroke-linecap: butt; stroke-width: 0.75;"/>
+			<polygon points="85 66, 88.27937 69.04068, 89.40017 65.20091" style="stroke: rgb(32%,40%,37%); stroke-linecap: butt; stroke-width: 1; fill: rgb(32%,40%,37%); fill-rule: evenodd;"/>
+			<text x="170.5" y="96.0" style="font-family: Helvetica; font-size: 6.5px;fill: rgb(32%,40%,37%); stroke:none;" transform="translate(0,192) scale(1,-1)">1:0..1</text>
+			<text x="12" y="17" style="font-family: Times-Roman; font-size: 7.3px;fill: rgb(32%,40%,37%); stroke:none;" transform="translate(0,34) scale(1,-1)">Sources pin document + version + chunk, including uncited input.</text>
+			<rect x="379" y="0" width="359" height="192" rx="7" ry="7" style="stroke: rgb(78%,85%,82%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="391" y="174" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,40%,32%); stroke:none;" transform="translate(0,348) scale(1,-1)">Monthly accounting and audit</text>
+			<rect x="389" y="120" width="150" height="25" rx="3" ry="3" style="stroke: rgb(9%,40%,32%); stroke-linecap: butt; stroke-width: 0.6; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="436.3061" y="129" style="font-family: Helvetica; font-size: 8.1px;fill: rgb(9%,20%,17%); stroke:none;" transform="translate(0,258) scale(1,-1)">usage_budgets</text>
+			<rect x="574" y="120" width="150" height="25" rx="3" ry="3" style="stroke: rgb(9%,40%,32%); stroke-linecap: butt; stroke-width: 0.6; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="622.43605" y="129" style="font-family: Helvetica; font-size: 8.1px;fill: rgb(9%,20%,17%); stroke:none;" transform="translate(0,258) scale(1,-1)">usage_periods</text>
+			<rect x="389" y="75" width="150" height="25" rx="3" ry="3" style="stroke: rgb(9%,40%,32%); stroke-linecap: butt; stroke-width: 0.6; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="428.6597" y="84" style="font-family: Helvetica; font-size: 8.1px;fill: rgb(9%,20%,17%); stroke:none;" transform="translate(0,168) scale(1,-1)">usage_reservations</text>
+			<rect x="574" y="75" width="150" height="25" rx="3" ry="3" style="stroke: rgb(9%,40%,32%); stroke-linecap: butt; stroke-width: 0.6; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="620.18425" y="84" style="font-family: Helvetica; font-size: 8.1px;fill: rgb(9%,20%,17%); stroke:none;" transform="translate(0,168) scale(1,-1)">usage_attempts</text>
+			<rect x="481" y="20" width="150" height="25" rx="3" ry="3" style="stroke: rgb(9%,40%,32%); stroke-linecap: butt; stroke-width: 0.6; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="537.5401" y="29" style="font-family: Helvetica; font-size: 8.1px;fill: rgb(9%,20%,17%); stroke:none;" transform="translate(0,58) scale(1,-1)">audit_logs</text>
+			<path d="M 539,87.5 L 574,87.5 Z" style="stroke: rgb(32%,40%,37%); stroke-linecap: butt; stroke-width: 0.75;"/>
+			<polygon points="574 87.5, 570 85.5, 570 89.5" style="stroke: rgb(32%,40%,37%); stroke-linecap: butt; stroke-width: 1; fill: rgb(32%,40%,37%); fill-rule: evenodd;"/>
+			<text x="551.443" y="90.5" style="font-family: Helvetica; font-size: 6.5px;fill: rgb(32%,40%,37%); stroke:none;" transform="translate(0,181) scale(1,-1)">1:N</text>
+			<path d="M 649,120 L 649,100 Z" style="stroke: rgb(32%,40%,37%); stroke-linecap: butt; stroke-width: 0.75;"/>
+			<polygon points="649 100, 647 104, 651 104" style="stroke: rgb(32%,40%,37%); stroke-linecap: butt; stroke-width: 1; fill: rgb(32%,40%,37%); fill-rule: evenodd;"/>
+			<text x="652.0" y="113.0" style="font-family: Helvetica; font-size: 6.5px;fill: rgb(32%,40%,37%); stroke:none;" transform="translate(0,226) scale(1,-1)">1:N</text>
+		</g>
+	</g>
+</svg>

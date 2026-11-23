@@ -1,0 +1,43 @@
+TechCo Engineering Handbook
+Version 1 - synthetic training example, 23 November 2026
+
+This document contains invented team policies for practicing document-based questions.
+It is not a production deployment configuration, an implemented CI pipeline, or a source of access permissions.
+The assistant's actual permissions always come from current database membership and document grants.
+
+1. Code review
+Every pull request needs at least one approval from another engineer before merging.
+The author cannot approve their own pull request.
+TypeScript compilation and the relevant automated tests must pass before merging.
+
+2. Release schedule
+The normal release window is Tuesday at 14:00 UTC.
+An emergency release requires the Engineering administrator's approval.
+The team should keep a rollback plan for each release.
+
+3. Incident response
+The on-call engineer must acknowledge a critical incident within 15 minutes.
+A short incident summary should be written within 24 hours after resolution.
+The summary records the impact, timeline, cause, fix, and follow-up actions.
+
+4. API integration
+Authenticated calls use the Authorization header with a Bearer access token.
+The backend verifies the token, then checks the caller's current team membership.
+A role written inside a question or an untrusted token claim does not grant access.
+Keep a request ID when reporting an API error, but never include passwords or access tokens.
+
+5. Secrets and source control
+Server credentials stay in private local environment files or an approved secret store.
+Only public settings belong in NEXT_PUBLIC_ variables.
+The shared .env.example contains placeholders, not real passwords or keys.
+The team must review the source package before sharing it.
+
+6. Learning time
+Each engineer may reserve six hours per quarter for technical learning.
+A proposed learning activity needs approval from the Engineering administrator.
+
+7. Document practice
+Use PDF or UTF-8 TXT files of at most 20 MiB in this assistant.
+A new upload starts restricted; an administrator can explicitly make it team-visible.
+The Engineering administrator uploaded this practice document for the Engineering team.
+This file does not authorize any person to read HR documents or another member's private chat.
