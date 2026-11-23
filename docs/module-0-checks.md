@@ -1,7 +1,5 @@
 # Module 0 verification evidence
 
-Date: 2026-11-18, Asia/Karachi. Scope: design artifacts and documentation tooling only. No application feature or database boundary test is represented as passing.
-
 ## Inspection commands and outcomes
 
 - `Get-Location` and `Get-ChildItem -Force`: confirmed the actual local Windows project root and initially empty folder.
